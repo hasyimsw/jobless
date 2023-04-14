@@ -8,7 +8,7 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 10px;
 }
 
 .nav .container {
@@ -29,19 +29,19 @@ body {
   gap: 50px;
 }
 
-.menu .menu-item {
+.menu a {
+  display: inline-block;
   font-size: 16px;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
 }
 
-.menu .menu-item-active {
-  font-weight: 500;
-  color: #000;
-}
-
 .menu .menu-item:hover {
   text-decoration: underline;
+}
+
+.menu .ctas {
+  display: none;
 }
 
 .ctas a {
@@ -52,6 +52,10 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   color: #000;
+}
+
+#hamburger-menu {
+  display: none;
 }
 
 /* hero */
@@ -108,6 +112,7 @@ body {
 /* card */
 .jobs {
   margin: 126px 0 96px 0;
+  padding: 0 16px;
 }
 
 .jobs-headline {
@@ -117,12 +122,12 @@ body {
 }
 
 .jobs-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
 .job {
-  width: calc(100% / 3);
   padding: 25px;
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0px 30px 60px rgba(0, 26, 255, 0.1);
@@ -206,4 +211,108 @@ body {
 .job-salary {
   font-size: 14px;
   font-weight: 600;
+}
+
+/* Footer */
+.footer-content .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.codedesign {
+  color: #000;
+  text-decoration: none;
+}
+
+.codedesign:hover {
+  color: #001aff;
+}
+
+.my-github {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+
+  .jobs-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 10%;
+  }
+
+  .nav .container {
+    margin-top: 30px;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .menu {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    background: #fff;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .menu .ctas {
+    display: inline;
+  }
+
+  .ctas {
+    display: none;
+  }
+
+  .menu.active {
+    opacity: 1;
+    right: 0;
+    padding: 70px 10px;
+  }
+
+  .menu a {
+    display: block;
+    text-align: center;
+    margin: 50px auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+  .jobs-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 60%;
+  }
 }

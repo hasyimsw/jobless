@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobless</title>
     <link
       href=" https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css "
       rel="stylesheet" />
@@ -13,7 +14,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <title>Jobless</title>
+    <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon" />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -21,14 +24,18 @@
       <div class="container">
         <div class="brand">Jobless</div>
         <div class="menu">
-          <a href="" class="menu-item menu-item-active">Home</a>
+          <a href="" class="menu-item">Home</a>
           <a href="" class="menu-item">Discover</a>
           <a href="" class="menu-item">Post a Job</a>
           <a href="" class="menu-item">Contact Us</a>
+          <div class="ctas">
+            <a href="" class="sign-up">Sign Up</a>
+          </div>
         </div>
         <div class="ctas">
           <a href="" class="sign-up">Sign Up</a>
         </div>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
     <!-- end navbar -->
@@ -114,5 +121,26 @@
       </div>
     </div>
     <!-- end hero -->
+
+    <!-- Footer -->
+    <footer class="footer-content">
+      <div class="container">
+        <p>Design by:</p>
+        <a href="https://codedesign.dev/" target="_blank" class="codedesign">
+          codedesign.dev</a
+        >
+        <span>|</span>
+        <p>Code by:</p>
+        <a href="https://github.com/hasyimsw/" target="_blank" class="my-github"
+          >Hasyim</a
+        >
+      </div>
+    </footer>
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script>
   </body>
 </html>
